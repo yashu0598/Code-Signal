@@ -12,7 +12,7 @@ int maxFraction(int[] numerators, int[] denominators) {
 
   int maxFractionIndex = 0;
   for (int i = 1; i < numerators.length; i++) {
-        if (numerators[i] * denominators[maxFractionIndex] <
+        if (numerators[i] * denominators[maxFractionIndex] >
         numerators[maxFractionIndex] * denominators[i]) {
       maxFractionIndex = i;
     }
