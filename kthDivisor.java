@@ -1,5 +1,13 @@
-int kthDigit(int n, int k) {
-    if(k>(""+n).length())
-        return -1;
-    return (""+n).charAt(k-1)-'0';
+int kthDivisor(int n, int k) {
+    int c=0;
+    for(int i=1;i<=n;i++)
+    {
+        if(n%i==0)
+        {
+            c++;
+            if(c==k)
+                return i;
+        }
+    }
+    return -1;
 }
