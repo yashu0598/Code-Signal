@@ -10,19 +10,12 @@ integerToStringOfFixedWidth(number, width) = "1234";
 For number = 1234 and width = 5, the output should be
 integerToStringOfFixedWidth(number, width) = "01234".
 */
-std::string integerToStringOfFixedWidth(int number, int width) {
-std::string result = "";
-
-  for (int i = 0; i < width; i++) {
-    result += '0';
-  }
-
-  int position = width-1;
-  while (number && position >= 0) {
-    result[position] = '0' + number % 10;
-    number /= 10;
-    position -= 1;
-  }
-
-  return result;
+String integerToStringOfFixedWidth(int number, int width) {
+    String s=""+number;
+    if(s.length()>=width)
+        return s.substring(s.length()-width,s.length());
+    String s1=s;
+    for(int i=0;i<width-s1.length();i++)
+        s="0"+s;
+    return s;
 }
