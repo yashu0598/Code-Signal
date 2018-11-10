@@ -15,5 +15,5 @@ char firstDigit(String inputString) {
   Pattern re = Pattern.compile("[0-9]");
   Matcher match = re.matcher(inputString);
   match.find();
-  return match.group(1).charAt(0);
+  return match.group(0).charAt(0);
 }
