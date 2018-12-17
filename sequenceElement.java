@@ -28,7 +28,7 @@ int sequenceElement(int[] a, int n) {
   Map<Integer, Integer> was = new HashMap<>();
   was.put(lastFive, 4);
 
-  for (int i = 0;; i++) {
+  for (int i = 5;; i++) {
     seq.add((seq.get(i - 1) + seq.get(i - 2) +
               seq.get(i - 3) + seq.get(i - 4) + seq.get(i - 5)) % 10);
     lastFive = (lastFive * 10 + seq.get(i)) % MOD;
