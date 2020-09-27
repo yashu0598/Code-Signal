@@ -4,4 +4,5 @@ int avoidObstacles(int[] inputArray) {
         for(int n:inputArray)
             t = t && n%i != 0;
         if(t) return i;
+ }
 }
